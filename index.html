@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio do impostor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <section class="impostor-menu">
+        <div class="impostor-menu-container">
+            <h1>Jogo do Impostor</h1>
+            <form class="impostor-menu-form">
+                <input type="number" id="numero-jogadores" placeholder="Número de jogadores">
+                <input type="number" id="numero-impostores" placeholder="Número de impostores">
+
+                <button class="btn" id="btnIniciar" type="submit">Iniciar Jogo</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="impostor-sorteio">
+        <div class="tela-sorteio">
+            <h2>Sorteio do Impostor</h2>
+            <button class="btn" id="btnSortear" type="submit">Sortear</button>
+        </div>
+
+        <div class="tela-usuario-sorteado">
+            <p>Desenhe um(a)</p>
+            <h3 id="mensagem-sorteio"></h3>
+
+            <div class="sorteio-img">
+                <img src="img/jogador.gif" alt="jogador">
+            </div>
+
+            <button class="btn" id="btnFecharTelaUsuarioSorteado" type="submit">Fechar</button>
+        </div>
+
+        <div class="tela-impostor-sorteado">
+            <h4>Você é o impostor!</h4>
+
+            <div class="sorteio-img">
+                <img src="img/impostor.gif" alt="impostor">
+            </div>
+
+            <button class="btn" id="btnFecharTelaImpostorSorteado" type="submit">Fechar</button>
+        </div>
+
+        <div class="fim-de-jogo">
+            <h5>Fim de jogo</h5>
+        </div>
+    </section> 
+    
+</body>
+</html>

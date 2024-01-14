@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root{
+    /*--------------------COLORS DARK MODE-----------------------------*/
+    --color2: #adb9e3;
+    --color3: #d2d6ef;
+    --color4: #dbe47a;
+    --color5: #4a59be;
+    --color6: #ffffed;
+    --color-shadow:rgba(0,0,0,0.2);
+    --background: linear-gradient(180deg, var(--color2) 0%, var(--color3) 50%, var(--color4) 100%) 0% 0% no-repeat padding-box;
+    --background2: rgba(255, 255, 255, 0.4); /*transparente*/
+    
+
+    /*---------------FONT-------------------*/
+    --font-title: 'Press Start 2P', sans-serif;
+    --font-body: 'VT323', monospace; 
+    
+
+    /*---------------FONT WEIGHT-------------------*/
+     --font-light: 300;
+     --font-medium: 500;
+
+    /*-------------------FONT-SIZE-----------------------------*/
+    --title-size: max(2rem, 24px); /*Tamanho de 2rem (32px se for font-size:16px) e 24px se ele for menor que 24px;*/ 
+    --subtitle-size: max(1.375rem, 16px); /*Tamanho de 1.375rem (22px se for font-size:16px) e 16px se ele for menor que 16px;*/ 
+    --body-size: max(1rem, 12px);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+    font-size: max(1vw, 16px);
+}
+
+html{
+    height: 100%;
+    color: var(--color5);
+}
+
+body{
+    background: var(--background);
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.impostor-menu{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background2);
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: .3rem;
+    box-shadow: 10px 5px 5px var(--color-shadow);
+    display: flex;
+    align-items: center;
+}
+
+.impostor-menu-container{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.impostor-menu-container h1{
+    font-family: var(--font-title);
+    font-size: var(--subtitle-size);
+    margin-bottom: 1.5rem;
+}
+
+
+.impostor-menu-form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.impostor-menu-form input{
+    width: 100%;
+    padding: .3rem;
+    border-radius: 0.5625em;
+    background-color: var(--color6);
+}
+
+::placeholder{
+    color: var(--color5);
+}
+.btn{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--color4);
+    padding: .5em;
+    outline: none;
+    border-radius: 0.5625em;
+    font-weight: bold;
+    color:var(--color5);
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none
+}
+
+.impostor-sorteio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.tela-sorteio{
+    display: none;
+}
+
+.tela-sorteio.active {
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.tela-sorteio.active h2{
+    font-family: var(--font-title);
+    font-size: var(--subtitle-size);
+    margin-bottom: 1.5rem;
+}
+
+.tela-usuario-sorteado{
+    display: none;
+}
+
+.tela-usuario-sorteado.active{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    gap: 1rem;
+    background-color: var(--color3);
+}
+
+.tela-usuario-sorteado.active h3{
+    text-transform: uppercase;
+    font-size: var(--subtitle-size);
+}
+
+.sorteio-img{
+    width: max(10rem, 10vw);
+    height: max(10rem,10vh);
+}
+
+.sorteio-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tela-impostor-sorteado{
+    display: none;
+}
+
+.tela-impostor-sorteado.active{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    padding: 0 10%;
+    gap: 1rem;
+    background-color: var(--color3);
+}
+
+.tela-impostor-sorteado.active h4{
+    font-size: var(--subtitle-size);
+}
+
+.fim-de-jogo{
+    display: none;
+}
+
+.fim-de-jogo.active{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    gap: 1rem;
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.fim-de-jogo h5{
+    font-family: var(--font-title);
+    font-size: var(--subtitle-size);
+}
+
