@@ -40,7 +40,8 @@ function showTelaSorteio(e) {
     
 }
 
-function showTelaUsuarioSorteado() {
+function showTelaUsuarioSorteado(e) {
+    e.preventDefault
     telaUsuarioSorteado.classList.add('active')
     revelarImpostor()
 }

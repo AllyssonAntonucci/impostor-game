@@ -108,10 +108,6 @@ body{
     cursor: pointer;
 }
 
-.btn:focus{
-    outline: none
-}
-
 .impostor-sorteio{
     position: absolute;
     top: 50%;
