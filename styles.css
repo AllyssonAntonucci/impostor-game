@@ -96,6 +96,7 @@ body{
 ::placeholder{
     color: var(--color5);
 }
+
 .btn{
     width: 100%;
     margin-top: 1rem;
@@ -106,6 +107,7 @@ body{
     font-weight: bold;
     color:var(--color5);
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .impostor-sorteio{
